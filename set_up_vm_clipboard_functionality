@@ -1,0 +1,14 @@
+=== set up vm clipboard functionality ===
+
+1. In proxmox command prompt
+`qm set <VM_ID> -vga std,clipboard=vnc`
+
+2. Install package on virtual machine
+`sudo pacman -S spice-vdagent (arch linux)`
+
+3. Input command into virtual machine
+`sudo systemctl enable --now spice-vdagentd.service`
+
+4. Perform test
+
+Congratulations, you have added clipboard functionality to your proxmox hypervisor.
